@@ -1,0 +1,8 @@
+celestia for Debian
+------------------
+
+This package is a work-in-progress, it doesn't complain with dfsg right now
+and should be separated in multiple other packages (celestia-data,
+celestia-qt5, celestia-data-nonfree, etc).
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Fri, 12 Jan 2018 11:36:38 -0300

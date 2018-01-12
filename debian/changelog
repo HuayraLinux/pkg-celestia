@@ -1,0 +1,5 @@
+celestia (1.6.1+git20180112.295b99f-1) experimental; urgency=medium
+
+  * Initial release, last commit from upstream git repo
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Fri, 12 Jan 2018 11:36:38 -0300

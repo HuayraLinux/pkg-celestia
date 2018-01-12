@@ -1,0 +1,21 @@
+Source: celestia
+Section: science
+Priority: optional
+Maintainer: Ignacio Losiggio <iglosiggio@gmail.com>
+Build-Depends: debhelper (>= 9), qtbase5-dev, libqt5opengl5-dev,
+               libcspice-dev, libtheora-dev, libjpeg-dev, libpng-dev,
+               liblua5.1-dev, pkg-config
+Standards-Version: 3.9.8
+Homepage: https://celestia.space
+Vcs-Git: https://github.com/HuayraLinux/pkg-celestia
+Vcs-Browser: https://github.com/HuayraLinux/pkg-celestia.git
+
+Package: celestia
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: real-time visual space simulation
+ Celestia is a free 3D astronomy program. Based on the Hipparcos
+ Catalogue, it allows users to display objects ranging in scale
+ from artificial satellites to entire galaxies in three
+ dimensions using OpenGL. Unlike most planetarium software, the
+ user is free to travel about the Universe.

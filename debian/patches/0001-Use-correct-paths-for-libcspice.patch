@@ -1,0 +1,30 @@
+From: Ignacio Losiggio <iglosiggio@gmail.com>
+Date: Fri, 12 Jan 2018 11:48:16 -0300
+Subject: Use correct paths for libcspice
+
+---
+ celestia.pro | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/celestia.pro b/celestia.pro
+index fc97f90..c66dfc2 100644
+--- a/celestia.pro
++++ b/celestia.pro
+@@ -607,8 +607,8 @@ unix {
+     isEmpty (LUAPC) {error("No shared Lua library found!")}
+ 
+     PKGCONFIG += glu $$LUAPC libpng theora
+-    INCLUDEPATH += /usr/local/cspice/include
+-    LIBS += -ljpeg /usr/local/cspice/lib/cspice.a
++    INCLUDEPATH += /usr/include/cspice
++    LIBS += -ljpeg -lcspice
+ }
+ 
+ macx {
+@@ -746,4 +746,4 @@ unix {
+     INSTALLS += target data textures lores_textures hires_textures \
+     flares models shaders fonts scripts locale extras extras-standard \
+     configuration desktop icon128
+-}
+\ No newline at end of file
++}
