@@ -1,0 +1,19 @@
+From: Ignacio Losiggio <iglosiggio@gmail.com>
+Date: Wed, 31 Jan 2018 11:21:30 -0300
+Subject: Simpler project name
+
+---
+ celestia.pro | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/celestia.pro b/celestia.pro
+index e58e8a6..fb0d0f2 100644
+--- a/celestia.pro
++++ b/celestia.pro
+@@ -1,5 +1,5 @@
+ TEMPLATE = app
+-TARGET = Celestia_QT
++TARGET = celestia
+ VERSION = 1.7.0
+ DESTDIR = .
+ OBJECTS_DIR = obj
