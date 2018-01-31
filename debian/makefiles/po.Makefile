@@ -21,7 +21,7 @@ top_srcdir = ..
 
 prefix = /usr/share
 exec_prefix = ${prefix}
-datarootdir = ${prefix}/Celestia_QT
+datarootdir = ${prefix}/$(PACKAGE)
 datadir = ${datarootdir}
 localedir = $(datadir)/locale
 gettextsrcdir = $(datadir)/gettext/po
