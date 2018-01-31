@@ -16,12 +16,10 @@ PACKAGE_BUGREPORT = celestia-developers@lists.sf.net
 
 SHELL = /bin/sh
 
-
 srcdir = .
 top_srcdir = ..
 
-
-prefix = /usr/share
+prefix = ../debian/celestia/usr/share
 exec_prefix = ${prefix}
 datarootdir = ${prefix}/$(PACKAGE)
 datadir = ${datarootdir}
@@ -51,10 +49,10 @@ MSGINIT = msginit
 MSGCONV = msgconv
 MSGFILTER = msgfilter
 
-POFILES =  ar.po be.po bg.po de.po el.po en.po es.po fr.po gl.po hu.po it.po ja.po ko.po lt.po lv.po nl.po no.po pl.po pt.po pt_BR.po ro.po ru.po sk.po sv.po tr.po uk.po zh_CN.po zh_TW.po
-GMOFILES =  ar.gmo be.gmo bg.gmo de.gmo el.gmo en.gmo es.gmo fr.gmo gl.gmo hu.gmo it.gmo ja.gmo ko.gmo lt.gmo lv.gmo nl.gmo no.gmo pl.gmo pt.gmo pt_BR.gmo ro.gmo ru.gmo sk.gmo sv.gmo tr.gmo uk.gmo zh_CN.gmo zh_TW.gmo
-UPDATEPOFILES =  ar.po-update be.po-update bg.po-update de.po-update el.po-update en.po-update es.po-update fr.po-update gl.po-update hu.po-update it.po-update ja.po-update ko.po-update lt.po-update lv.po-update nl.po-update no.po-update pl.po-update pt.po-update pt_BR.po-update ro.po-update ru.po-update sk.po-update sv.po-update tr.po-update uk.po-update zh_CN.po-update zh_TW.po-update
-DUMMYPOFILES =  ar.nop be.nop bg.nop de.nop el.nop en.nop es.nop fr.nop gl.nop hu.nop it.nop ja.nop ko.nop lt.nop lv.nop nl.nop no.nop pl.nop pt.nop pt_BR.nop ro.nop ru.nop sk.nop sv.nop tr.nop uk.nop zh_CN.nop zh_TW.nop
+POFILES =  ar.po be.po bg.po de.po el.po es.po fr.po gl.po hu.po it.po ja.po ko.po lt.po lv.po nl.po no.po pl.po pt_BR.po pt.po ro.po ru.po sk.po sv.po tr.po uk.po zh_CN.po zh_TW.po
+GMOFILES =  ar.gmo be.gmo bg.gmo de.gmo el.gmo es.gmo fr.gmo gl.gmo hu.gmo it.gmo ja.gmo ko.gmo lt.gmo lv.gmo nl.gmo no.gmo pl.gmo pt_BR.gmo pt.gmo ro.gmo ru.gmo sk.gmo sv.gmo tr.gmo uk.gmo zh_CN.gmo zh_TW.gmo
+UPDATEPOFILES =  ar.po-update be.po-update bg.po-update de.po-update el.po-update es.po-update fr.po-update gl.po-update hu.po-update it.po-update ja.po-update ko.po-update lt.po-update lv.po-update nl.po-update no.po-update pl.po-update pt_BR.po-update pt.po-update ro.po-update ru.po-update sk.po-update sv.po-update tr.po-update uk.po-update zh_CN.po-update zh_TW.po-update
+DUMMYPOFILES =  ar.nop be.nop bg.nop de.nop el.nop es.nop fr.nop gl.nop hu.nop it.nop ja.nop ko.nop lt.nop lv.nop nl.nop no.nop pl.nop pt_BR.nop pt.nop ro.nop ru.nop sk.nop sv.nop tr.nop uk.nop zh_CN.nop zh_TW.nop
 DISTFILES.common = Makefile.in.in remove-potcdate.sin \
 $(DISTFILES.common.extra1) $(DISTFILES.common.extra2) $(DISTFILES.common.extra3)
 DISTFILES = $(DISTFILES.common) Makevars POTFILES.in \
@@ -62,18 +60,140 @@ $(POFILES) $(GMOFILES) \
 $(DISTFILES.extra1) $(DISTFILES.extra2) $(DISTFILES.extra3)
 
 POTFILES = \
-     ../data/constellations.cpp
+     ../src/celengine/asterism.cpp \
+     ../src/celengine/astro.cpp \
+     ../src/celengine/axisarrow.cpp \
+     ../src/celengine/body.cpp \
+     ../src/celengine/boundaries.cpp \
+     ../src/celengine/catalogxref.cpp \
+     ../src/celengine/cmdparser.cpp \
+     ../src/celengine/command.cpp \
+     ../src/celengine/console.cpp \
+     ../src/celengine/dds.cpp \
+     ../src/celengine/deepskyobj.cpp \
+     ../src/celengine/dispmap.cpp \
+     ../src/celengine/dsodb.cpp \
+     ../src/celengine/execution.cpp \
+     ../src/celengine/fragmentprog.cpp \
+     ../src/celengine/frame.cpp \
+     ../src/celengine/galaxy.cpp \
+     ../src/celengine/glcontext.cpp \
+     ../src/celengine/globular.cpp \
+     ../src/celengine/glshader.cpp \
+     ../src/celengine/image.cpp \
+     ../src/celengine/location.cpp \
+     ../src/celengine/lodspheremesh.cpp \
+     ../src/celengine/marker.cpp \
+     ../src/celengine/meshmanager.cpp \
+     ../src/celengine/multitexture.cpp \
+     ../src/celengine/nebula.cpp \
+     ../src/celengine/observer.cpp \
+     ../src/celengine/opencluster.cpp \
+     ../src/celengine/overlay.cpp \
+     ../src/celengine/parseobject.cpp \
+     ../src/celengine/parser.cpp \
+     ../src/celengine/particlesystem.cpp \
+     ../src/celengine/particlesystemfile.cpp \
+     ../src/celengine/planetgrid.cpp \
+     ../src/celengine/regcombine.cpp \
+     ../src/celengine/rendcontext.cpp \
+     ../src/celengine/render.cpp \
+     ../src/celengine/renderglsl.cpp \
+     ../src/celengine/rotationmanager.cpp \
+     ../src/celengine/selection.cpp \
+     ../src/celengine/shadermanager.cpp \
+     ../src/celengine/simulation.cpp \
+     ../src/celengine/skygrid.cpp \
+     ../src/celengine/solarsys.cpp \
+     ../src/celengine/spheremesh.cpp \
+     ../src/celengine/starbrowser.cpp \
+     ../src/celengine/starcolors.cpp \
+     ../src/celengine/star.cpp \
+     ../src/celengine/stardb.cpp \
+     ../src/celengine/starname.cpp \
+     ../src/celengine/staroctree.cpp \
+     ../src/celengine/stellarclass.cpp \
+     ../src/celengine/texmanager.cpp \
+     ../src/celengine/texture.cpp \
+     ../src/celengine/tokenizer.cpp \
+     ../src/celengine/trajmanager.cpp \
+     ../src/celengine/univcoord.cpp \
+     ../src/celengine/universe.cpp \
+     ../src/celengine/vertexprog.cpp \
+     ../src/celengine/virtualtex.cpp \
+     ../src/celengine/visibleregion.cpp \
+     ../ \
+     ../src/celestia/celestiacore.cpp \
+     ../src/celestia/celx.cpp \
+     ../src/celestia/oggtheoracapture.cpp \
+     ../src/celestia/url.cpp \
+     ../ \
+     ../src/celutil/util.cpp \
+     ../ \
+     ../data/data.cpp \
+     ../ \
+     ../src/celestia/win32/res/resource_strings.cpp \
+     ../src/celestia/win32/winmain.cpp \
+     ../src/celestia/win32/windatepicker.cpp \
+     ../src/celestia/win32/wineclipses.cpp \
+     ../src/celestia/win32/winssbrowser.cpp \
+     ../src/celestia/win32/winstarbrowser.cpp \
+     ../src/celestia/win32/wintime.cpp \
+     ../ \
+     ../src/celestia/kde/celestialbrowser.cpp \
+     ../src/celestia/kde/eclipsefinderdlg.cpp \
+     ../src/celestia/kde/kcelbookmarkmanager.cpp \
+     ../src/celestia/kde/kcelbookmarkmenu.cpp \
+     ../src/celestia/kde/kdeapp.cpp \
+     ../src/celestia/kde/kdeglwidget.cpp \
+     ../src/celestia/kde/kdemain.cpp \
+     ../src/celestia/kde/kdepreferencesdialog.cpp \
+     ../src/celestia/kde/kdeuniquecelestia.cpp \
+     ../src/celestia/kde/selectionpopup.cpp \
+     ../src/celestia/kde/videocapturedlg.cpp \
+     ../src/celestia/kde/rc.cpp \
+     ../ \
+     ../src/celestia/kde/celestialbrowser.h \
+     ../src/celestia/kde/cellistviewitem.h \
+     ../src/celestia/kde/eclipsefinderdlg.h \
+     ../src/celestia/kde/kcelbookmarkmanager.h \
+     ../src/celestia/kde/kcelbookmarkmenu.h \
+     ../src/celestia/kde/kcelbookmarkowner.h \
+     ../src/celestia/kde/kdeapp.h \
+     ../src/celestia/kde/kdeglwidget.h \
+     ../src/celestia/kde/kdepreferencesdialog.h \
+     ../src/celestia/kde/kdeuniquecelestia.h \
+     ../src/celestia/kde/selectionpopup.h \
+     ../ \
+     ../src/celestia/qt/qtappwin.cpp \
+     ../src/celestia/qt/qtbookmark.cpp \
+     ../src/celestia/qt/qtcelestiaactions.cpp \
+     ../src/celestia/qt/qtcelestialbrowser.cpp \
+     ../src/celestia/qt/qtdeepskybrowser.cpp \
+     ../src/celestia/qt/qteventfinder.cpp \
+     ../src/celestia/qt/qtinfopanel.cpp \
+     ../src/celestia/qt/qtpreferencesdialog.cpp \
+     ../src/celestia/qt/qtselectionpopup.cpp \
+     ../src/celestia/qt/qtsettimedialog.cpp \
+     ../src/celestia/qt/qtsolarsystembrowser.cpp \
+     ../src/celestia/qt/qttimetoolbar.cpp \
+     ../src/celestia/qt/xbel.cpp \
+     ../ \
+     ../src/celestia/qt/ui/ui_addbookmark.h \
+     ../src/celestia/qt/ui/ui_newbookmarkfolder.h \
+     ../src/celestia/qt/ui/ui_organizebookmarks.h \
+     ../src/celestia/qt/ui/ui_preferences.h
 
-CATALOGS =  ar.gmo be.gmo bg.gmo de.gmo el.gmo en.gmo es.gmo fr.gmo gl.gmo hu.gmo it.gmo ja.gmo ko.gmo lt.gmo lv.gmo nl.gmo no.gmo pl.gmo pt.gmo pt_BR.gmo ro.gmo ru.gmo sk.gmo sv.gmo tr.gmo uk.gmo zh_CN.gmo zh_TW.gmo
+CATALOGS =  ar.gmo be.gmo bg.gmo de.gmo el.gmo es.gmo fr.gmo gl.gmo hu.gmo it.gmo ja.gmo ko.gmo lt.gmo lv.gmo nl.gmo no.gmo pl.gmo pt_BR.gmo pt.gmo ro.gmo ru.gmo sk.gmo sv.gmo tr.gmo uk.gmo zh_CN.gmo zh_TW.gmo
 
 # Makevars gets inserted here. (Don't remove this line!)
 # Makefile variables for PO directory in any package using GNU gettext.
 
 # Usually the message domain is the same as the package name.
-DOMAIN = celestia_constellations
+DOMAIN = $(PACKAGE)
 
 # These two variables depend on the location of this directory.
-subdir = po2
+subdir = po
 top_builddir = ..
 
 # These options get passed to xgettext.
@@ -103,7 +223,7 @@ COPYRIGHT_HOLDER = Chris Laurel
 # It can be your email address, or a mailing list address where translators
 # can write to without being subscribed, or the URL of a web page through
 # which the translators can contact you.
-MSGID_BUGS_ADDRESS = chris@teyssier.org
+MSGID_BUGS_ADDRESS = celestia-developers@lists.sourceforge.net
 
 # This is the list of locale categories, beyond LC_MESSAGES, for which the
 # message catalogs shall be used.  It is usually empty.
@@ -424,10 +544,6 @@ $(DUMMYPOFILES):
 update-gmo: Makefile $(GMOFILES)
 	@:
 
-Makefile: Makefile.in.in Makevars $(top_builddir)/config.status POTFILES.in LINGUAS
-	cd $(top_builddir) \
-	  && $(SHELL) ./config.status $(subdir)/$@.in po-directories
-
 force:
 
 # Tell versions [3.59,3.63) of GNU make not to export all variables.
@@ -435,7 +551,45 @@ force:
 .NOEXPORT:
 # Additional Makefile rule to extract object names from data files
 
-celestia_constellations.pot-update: ../data/constellations.cpp
+Makefile: Rules-data
 
-../data/constellations.cpp:
-	egrep ^\" ../data/asterisms.dat | awk -F\" '{ print "_(\"" $$2 "\");" }' > ../data/constellations.cpp
+celestia.pot-update: ../data/data.cpp
+
+../data/data.cpp: ../data/solarsys.ssc ../data/earth_locs.ssc ../data/world-capitals.ssc ../data/galaxies.dsc ../data/nearstars.stc
+	egrep '^(\"|ReferencePoint)' ../data/solarsys.ssc | awk -F'\"|:' '{ print "_(\"" $$2 "\");" }' > ../data/data.cpp
+	grep \"Sol/Earth\" ../data/earth_locs.ssc | awk -F\" '{ print "_(\"" $$2 "\");" }' >> ../data/data.cpp
+	grep \"Sol/Earth\" ../data/world-capitals.ssc | awk -F\" '{ print "_(\"" $$2 "\");" }' >> ../data/data.cpp
+	egrep '\"Milky Way\"|\"LMC\"|\"SMC\"' ../data/galaxies.dsc | awk -F\" '{ print "_(\"" $$2 "\");" }' >> ../data/data.cpp
+	egrep '\"Solar System Barycenter\"' ../data/nearstars.stc | awk -F\" '{ print "_(\"" $$2 "\");" }' >> ../data/data.cpp
+
+clean: clean-data
+
+clean-data:
+	rm -f ../data/data.cpp
+# Additional Makefile rule to extract strings from KDE's rc and ui files.
+
+Makefile: Rules-kde
+
+celestia.pot-update: ../src/celestia/kde/rc.cpp
+
+../src/celestia/kde/rc.cpp:
+	extractrc ../src/celestia/kde/*/*.rc > ../src/celestia/kde/rc.cpp
+	extractrc ../src/celestia/kde/*.ui >> ../src/celestia/kde/rc.cpp
+
+clean: clean-kde
+
+clean-kde:
+	rm -f ../src/celestia/kde/rc.cpp
+# Additional Makefile rule to extract object names from windows resource files
+
+Makefile: Rules-win-resource
+
+celestia.pot-update: ../src/celestia/win32/res/resource_strings.cpp
+
+../src/celestia/win32/res/resource_strings.cpp: ../src/celestia/win32/res/celestia.rc
+	./extract_resource_strings.pl < ../src/celestia/win32/res/celestia.rc > ../src/celestia/win32/res/resource_strings.cpp
+
+clean: clean-win-resource
+
+clean-win-resource:
+	rm -f ../src/celestia/res/resource_strings.cpp
