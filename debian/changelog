@@ -1,3 +1,11 @@
+celestia (1.6.1+git20180112.295b99f-2) experimental; urgency=medium
+
+  * Updated pot
+  * Correct instalation of desktop file
+  * Added script for pot updating
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Thu, 01 Feb 2018 12:17:43 -0300
+
 celestia (1.6.1+git20180112.295b99f-1) experimental; urgency=medium
 
   * Initial release, last commit from upstream git repo
