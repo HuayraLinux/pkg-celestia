@@ -1,0 +1,31 @@
+From: Ignacio Losiggio <iglosiggio@gmail.com>
+Date: Thu, 8 Mar 2018 14:27:57 -0300
+Subject: Load translations and resources from /usr/share/celestia
+
+---
+ src/celestia/qt/qtmain.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/celestia/qt/qtmain.cpp b/src/celestia/qt/qtmain.cpp
+index 1f9b47a..f8df81d 100644
+--- a/src/celestia/qt/qtmain.cpp
++++ b/src/celestia/qt/qtmain.cpp
+@@ -74,7 +74,8 @@ int main(int argc, char *argv[])
+     app.installTranslator(&qtTranslator);
+ 
+     QTranslator celestiaTranslator;
+-    celestiaTranslator.load("celestia_" + QLocale::system().name());
++    celestiaTranslator.load("celestia_" + QLocale::system().name(),
++		            "/usr/share/celestia/locale");
+     app.installTranslator(&celestiaTranslator);
+ 
+     Q_INIT_RESOURCE(icons);
+@@ -84,7 +85,7 @@ int main(int argc, char *argv[])
+ 
+     ParseCommandLine();
+ 
+-    QPixmap pixmap("splash.png");
++    QPixmap pixmap("/usr/share/celestia/splash.png");
+     QSplashScreen splash(pixmap);
+     splash.setMask(pixmap.mask());
+ 

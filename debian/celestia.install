@@ -1,1 +1,3 @@
 catalogs	/usr/share/celestia
+splash.png	/usr/share/celestia
+ts/*.qm		/usr/share/celestia/locale

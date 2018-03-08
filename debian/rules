@@ -24,11 +24,14 @@ export QT_SELECT := qt5
 #	dh_auto_configure -- #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
 
 override_dh_auto_install:
-	dh_auto_install
 	cp debian/makefiles/po/Makefile  po  && cd po  && make install
 	cp debian/makefiles/po2/Makefile po2 && cd po2 && make install
+	find debian/celestia -iname Makefile.am -delete
+	lrelease celestia.pro
+	dh_auto_install
 
 override_dh_auto_clean:
 	rm -f .qmake.stash po/*.gmo  po/*.mo  po/Makefile  po/stamp-po \
-	                   po2/*.gmo po2/*.mo po2/Makefile po2/stamp-po
+	                   po2/*.gmo po2/*.mo po2/Makefile po2/stamp-po \
+			   ts/*.qm
 	dh_auto_clean
