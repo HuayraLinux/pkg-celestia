@@ -2,6 +2,5 @@
 0002-Clean-and-install-the-desktop-file-correctly.patch
 0003-Simpler-project-name.patch
 0004-Update-translations.patch
-0005-Enhanced-spanish-translation.patch
-0006-add-qtranslator-translations.patch
-0007-Load-translations-and-resources-from-usr-share-celes.patch
+0005-add-qtranslator-translations.patch
+0006-Load-translations-and-resources-from-usr-share-celes.patch
