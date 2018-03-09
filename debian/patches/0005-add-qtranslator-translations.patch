@@ -2432,7 +2432,7 @@ index 0000000..2ddd567
 +</TS>
 diff --git a/ts/celestia_es.ts b/ts/celestia_es.ts
 new file mode 100644
-index 0000000..bc24665
+index 0000000..c65aa30
 --- /dev/null
 +++ b/ts/celestia_es.ts
 @@ -0,0 +1,453 @@
@@ -2612,7 +2612,7 @@ index 0000000..bc24665
 +    <message>
 +        <location filename="../src/celestia/qt/preferences.ui" line="187"/>
 +        <source>Orbits</source>
-+        <translation>Órbistas</translation>
++        <translation>Órbitas</translation>
 +    </message>
 +    <message>
 +        <location filename="../src/celestia/qt/preferences.ui" line="193"/>
