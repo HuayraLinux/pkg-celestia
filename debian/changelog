@@ -1,3 +1,11 @@
+celestia (1.6.1+git20180112.295b99f-3) unstable; urgency=medium
+
+  * Ádded an upgraded spanish translation
+  * Added translation support for the QT dialogs
+  * Removed the instalation of automake files
+
+ -- Ignacio Losiggio <alumno@huayra>  Mon, 12 Mar 2018 11:48:26 -0300
+
 celestia (1.6.1+git20180112.295b99f-2) experimental; urgency=medium
 
   * Updated pot
